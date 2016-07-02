@@ -1,0 +1,5 @@
+target/m2e-wtp/web-resources/META-INF/maven/com.ims/IMS/pom.properties
+
+*.swp
+
+target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
