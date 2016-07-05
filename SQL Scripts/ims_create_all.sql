@@ -150,7 +150,7 @@ create table ims_product(
   reorder_quantity number not null,
   retail_price number not null,
   product_weight number,
-  product_image varchar2(10),
+  product_image varchar2(30),
   constraint prod_pk primary key (product_upc)
 );
 --
@@ -168,125 +168,125 @@ end;
 --
 insert all
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Intel Core i7 4790k', 'Intel Core i7 4790k Quad Core 4.0 GHz LGA 1150 Desktop Processor',
-                'i7 4790k', 300.99, 'XS', 15, 339.99)
+                'i7 4790k', 300.99, 'XS', 15, 339.99, 0.7, 'i74790k.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('AMD FX-8350 Black Edition Vishera', 'AMD FX-8350 Black Edition Vishera 8-Core 4.0 GHz(4.2 GHz Turbo)',
-               'AMD FX-8350', 120.00, 'XS', 10, 159.99)
+               'AMD FX-8350', 120.00, 'XS', 10, 159.99, 0.7, '8350black.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Intel Pentium G3258 Haswell', 'Intel Pentium G3258 Haswell Dual-Core 3.2 GHz LGA 1150 53W',
-               'Pentium G3258', 49.99, 'XS', 8, 69.99)
+               'Pentium G3258', 49.99, 'XS', 8, 69.99, 0.7, 'g3258.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('EVGA Geforce GTX 970', 'EVGA Geforce GTX 970 4GB FTW Gaming w/ACX 2.0+ Whisper Silent Cooling',
-               'EVGA GTX 970', 329.99, 'S', 8, 405.99)
+               'EVGA GTX 970', 329.99, 'S', 8, 405.99, 2.2, 'gtx970.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('MSI Geforce GTX 1080', 'MSI Geforce GTX 1080 DirectX12 8GB OC 256-bit GDDR5X PCI Express 3.0',
-               'MSI GTX 1080', 529.99, 'S', 10, 659.99)
+               'MSI GTX 1080', 529.99, 'S', 10, 659.99, 2.2, 'gtx1080.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Sapphire Nitro Radeon R9 390X', 'Sapphire Nitro Radeon R9 390X DirectX 12 8GB 512-bit GDDR5 PCI Express 3.0',
-               'Sapphire R9 390X', 509.99, 'S', 5, 599.99)
+               'Sapphire R9 390X', 509.99, 'S', 5, 599.99, 2.2, 'r9390x.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('ASUS ROG 1151 Intel Z170', 'ASUS ROG 1151 Intel Z170 LGA 1151 HDMI SATA 6Gb/s USB 3.1 ATX Intel',
-               'ASUS ROG Intel Z170', 149.99, 'M', 5, 214.99)
+               'ASUS ROG Intel Z170', 149.99, 'M', 5, 214.99, 3.1, 'AsusROG1151.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('ASUS H971-Plus Intel H97', 'ASUS H971-Plus Intel H97 LGA 1150 HDMI SATA 6Gb/s USB 3.0 Mini ITX',
-               'ASUS H971-Plus', 69.99, 'M', 5, 99.00)
+               'ASUS H971-Plus', 69.99, 'M', 5, 99.00, 3.1, 'AsusH971.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('MSI X99A Intel X99 Godlike Gaming Carbon', 'MSI X99A Intel X99 Godlike Gaming Carbon LGA 2011-v3 SATA 6Gb/s USB 3.1',
-               'MSI X99A', 399.99, 'M', 5, 549.99)
+               'MSI X99A', 399.99, 'M', 5, 549.99, 3.3, 'MSIX99A.jpg')
    into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('WD Blue 1TB Desktop Hard Disk Drive', 'WD Blue 1TB Desktop Hard Disk Drive 7200 RPM SATA 6Gb/s 64MB Cache 3.5 Inch',
-               'WD Blue 1TB Desktop', 29.99, 'S', 5, 49.99)
+               'WD Blue 1TB Desktop', 29.99, 'S', 5, 49.99, 3.5, 'WDBlue1TB.jpg')
    into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('WD Black 1TB Performance Desktop Hard Disk Drive', 'WD Black 1TB Performance Desktop Hard Disk Drive 7200 RPM SATA 6Gb/s 64MB Cache 3.5 Inch',
-               'WD Black 1TB Desktop', 49.99, 'S', 5, 69.99)
+               'WD Black 1TB Desktop', 49.99, 'S', 5, 69.99, 3.5, 'WDBlack1TB.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('WD VelociRaptor 500GB', 'WD VelociRaptor 500GB 10000 RPM 64MB Cache SATA 6.0 Gb/s 3.5 Inch HDD',
-               'WD VelociRaptor 500GB', 149.99, 'S', 5, 209.89)
+               'WD VelociRaptor 500GB', 149.99, 'S', 5, 209.89, 3.5, 'WDVel500GB.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Samsung 850 EVO 2.5" 500GB', 'Samsung 850 EVO 2.5" 500GB SATA III 3-D Vertical Internal Solid State Drive',
-               'Samsung 850 EVO 500GB', 119.99, 'S', 8, 154.99)
+               'Samsung 850 EVO 500GB', 119.99, 'S', 8, 154.99, 1.7, 'Samsung850EVO.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Samsung 850 EVO 2.5" 250GB', 'Samsung 850 EVO 2.5" 250GB SATA III 3-D Vertical Internal Solid State Drive',
-               'Samsung 850 EVO 250GB', 79.99, 'S', 8, 92.00) 
+               'Samsung 850 EVO 250GB', 79.99, 'S', 8, 92.00, 1.7, 'Samsung850EVO.jpg') 
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Kingston SSDNow V300 2.5" 240GB', 'Kingston SSDNow V300 2.5" 240GB SATA III Internal Solid State Drive',
-               'Kingston V300 240GB', 45.00, 'S', 6, 63.00)
+               'Kingston V300 240GB', 45.00, 'S', 6, 63.00, 1.7, 'Kingston240GB.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('G.SKILL Ripjaws X Series 8GB (2 X 4GB)', 'G.SKILL Ripjaws X Series 8GB (2 X 4GB) 240-Pin DDR3 SDRAM 2133(PC3 17000) Desktop Memory',
-               'G.S Ripjaws 8GB (2 x 4GB)', 30.00, 'XS', 5, 44.99)
+               'G.S Ripjaws 8GB (2 x 4GB)', 30.00, 'XS', 5, 44.99, 0.8, 'GSKILL8GB(2X4GB).jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('CORSAIR Vengeance Pro 8GB (2 X 4GB)', 'CORSAIR Vengeance Pro 8GB (2 X 4GB) 240-Pin DDR3 SDRAM 2400(PC3 19200) Desktop Memory',
-               'CORSAIR V.Pro 8GB (2 X 4GB)', 29.99, 'S', 5, 41.99)
+               'CORSAIR V.Pro 8GB (2 X 4GB)', 29.99, 'S', 5, 41.99, 0.8, 'CORSAIRVP8GB(2X4GB).jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('G.SKILL Ripjaws V Series 16GB (2 X 8GB)', 'G.SKILL Ripjaws V Series 16GB (2 X 8GB) 288-Pin DDR4 SDRAM 3200 Intel Z170 Platform Desktop Memory',
-               'G.S RJ VS 16GB (2 X 8GB)', 52.99, 'S', 5, 72.99)
+               'G.S RJ VS 16GB (2 X 8GB)', 52.99, 'S', 5, 72.99, 0.8, 'GSKILLRVS16GB(2X8GB).jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('EVGA 220-G2-0850-XR 80 PLUS GOLD 850W', 'EVGA 220-G2-0850-XR 80 PLUS GOLD 850W ECO Mode NVIDIA SLI Ready and Crossfire Support Continuous Power Supply',
-               'EVGA 220 80+ Gold 850W', 89.99, 'M', 6, 119.99)
+               'EVGA 220 80+ Gold 850W', 89.99, 'M', 6, 119.99, 6.8, 'EVGA220XR80P850W.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('EVGA 220-P2-1000-XR 80 PLUS Platinum 1000 W', 'EVGA 220-P2-1000-XR 80 PLUS Platinum 1000 W 10 yr Warranty ECO Mode NVIDIA SLI Ready and Crossfire Support Power Supply',
-               'EVGA 220 80+ Plat 1000W',129.99, 'M', 5, 179.99) 
+               'EVGA 220 80+ Plat 1000W',129.99, 'M', 5, 179.99, 6.8, 'EVGA22080PP1000W.jpg') 
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Thermaltake Smart Series 700W SLI', 'Thermaltake Smart Series 700W SLI / CrossFire Ready Continuous Power ATX12V V2.3 / EPS12V 80 PLUS Certified Active PFC Power Supply',
-               'Thermaltake SS 700W SLI', 39.99, 'M', 5, 59.99)
+               'Thermaltake SS 700W SLI', 39.99, 'M', 5, 59.99, 6.8, 'ThermaltakeSS700W.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('SteelSeries Rival Optical Gaming Mouse', 'SteelSeries Rival Optical Gaming Mouse',
-               'SteelSeries Rival', 39.99, 'S', 4, 60.00)
+               'SteelSeries Rival', 39.99, 'S', 4, 60.00, 1.1, 'SteelSeriesRival.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('RAZER DeathAdder Chroma USB Gaming Mouse', 'RAZER DeathAdder Chroma USB Gaming Mouse',
-               'RAZER DeathAdder Chroma', 43.99, 'S', 5, 69.99)
+               'RAZER DeathAdder Chroma', 43.99, 'S', 5, 69.99, 1.1, 'RazerDAChroma.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Logitech G300S Gaming Mouse', 'Logitech G300S Black 9 Buttons 1 x Wheel USB Wired Optical 2500 dpi Gaming',
-               'Logitech G300S', 19.99, 'S', 4, 29.99)
+               'Logitech G300S', 19.99, 'S', 4, 29.99, 1.1, 'LogitechG300S.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Perixx PX-1100 Backlit Gaming Keyboard', 'Perixx PX-1100 Backlit Gaming Keyboard - Red/Blue/Purple Illuminated Keys',
-               'Perixx PX-1100 Keyboard', 29.99, 'M', 4, 49.99)
+               'Perixx PX-1100 Keyboard', 29.99, 'M', 4, 49.99, 0.7, 'PerixxPX1100.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Corsair Vengeance K65 Compact Mechanical Gaming Keyboard', 'Corsair Vengeance K65 Compact Mechanical Gaming Keyboard - Cherry MX Red Switches',
-               'Corsair V. K65 Keyboard', 59.99, 'M', 4, 87.99)
+               'Corsair V. K65 Keyboard', 59.99, 'M', 4, 87.99, 0.7, 'CorsairVK65.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Logitech G710 Mechanical USB Gaming Keyboard', 'Logitech G710 Mechanical USB Gaming Keyboard',
-               'Logitech G710 Keyboard', 88.99, 'M', 4, 114.99)
+               'Logitech G710 Keyboard', 88.99, 'M', 4, 114.99, 0.8, 'LogitechG710.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Acer Predator 24" 1ms 1920x1080 Gaming Monitor', 'Acer Predator XB241H Bmipr 24" 1ms 1920x1080 Gaming Monitor G-Sync HDMI 350 cd/m2 1,000:1 Built-in Speakers',
-               'Acer Predator 24" Monitor', 309.99, 'M', 3, 394.99)
+               'Acer Predator 24" Monitor', 309.99, 'M', 3, 394.99, 15.5, 'AcerPredator24.jpg')
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('ASUS ROG PG278Q Black 27" WQHD 2560 x 1440', 'ASUS ROG PG278Q Black 27" WQHD 2560 x 1440, 144 Hz 1ms (GTG) NVIDIA G-Sync Gaming Monitor',
-               'ASUS ROG 27" 144Hz 1ms Monitor', 499.99, 'L', 5, 669.99) 
+               'ASUS ROG 27" 144Hz 1ms Monitor', 499.99, 'L', 5, 669.99, 17.5, 'ASUSROGPG278Q.jpg') 
   into ims_product(PRODUCT_NAME,PRODUCT_DESCRIPTION,SHORT_NAME,UNIT_COST,
-                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE) 
+                   PACK_SIZE,REORDER_QUANTITY,RETAIL_PRICE,PRODUCT_WEIGHT,PRODUCT_IMAGE) 
        values ('Acer XB270H Abprz Black 27" 1ms Monitor', 'Acer XB270H Abprz Black 27" 1ms (GTG) 144HZ Widescreen LED Backlight LCD G-SYNC Monitor, 300 cd/m2, USB Hub, 1000:1',
-               'Acer XB270H 27" 1ms Monitor', 479.99, 'L', 4, 595.99)
+               'Acer XB270H 27" 1ms Monitor', 479.99, 'L', 4, 595.99, 17.1, 'AcerXB270H.jpg')
 select * from dual;  
 
 --
