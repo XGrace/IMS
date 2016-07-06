@@ -4,6 +4,6 @@ import com.ims.domain.User;
 
 public interface UserService
 {
-	public void createNewUser(User user);
-	public User getUserByUsername(String username);
+	public boolean registerUser(User user);
+	public User authenticateUser(User user);
 }

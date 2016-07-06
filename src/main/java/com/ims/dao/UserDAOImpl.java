@@ -3,18 +3,20 @@ package com.ims.dao;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
 
 import com.ims.domain.User;
 
+@Repository
 public class UserDAOImpl implements UserDAO
 {
 	private SessionFactory sessionFactory;
-	
+
 	public void setSessionFactory(SessionFactory sessionFactory)
 	{
 		this.sessionFactory = sessionFactory;
 	}
-	
+
 	@Override
 	public void createNewUser(User user)
 	{

@@ -443,3 +443,30 @@ create sequence ims_po_line_seq
 start with 1
 increment by 1;
 --
+-- Create users table
+create table IMS_USERS
+(
+  IMS_USERS_ID number,
+  IMS_USERNAME varchar2(50) not null,
+  IMS_PASSWORD varchar2(50) not null,
+  USER_FIRST_NAME varchar2(100) not null,
+  USER_LAST_NAME varchar2(100) not null,
+  USER_EMAIL varchar2(150) not null,
+  
+  constraint IMS_USERS_PK primary key (IMS_USERS_ID),
+  
+  constraint IMS_USERS_UNv1 unique (IMS_USERNAME, USER_EMAIL)
+);
+
+-- Create users sequence
+create sequence IMS_USERS_SEQ
+  start with 1
+  increment by 1;
+  
+-- Create users trigger
+create or replace trigger IMS_USERS_TRIG
+before insert on IMS_USERS
+for each row
+begin
+  select IMS_USERS_SEQ.nextval into :new.IMS_USERS_ID from dual;
+end;

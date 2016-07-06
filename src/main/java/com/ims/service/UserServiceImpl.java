@@ -1,24 +1,42 @@
 package com.ims.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ims.dao.UserDAO;
 import com.ims.dao.UserDAOImpl;
 import com.ims.domain.User;
 
-public class UserServiceImpl
+@Service
+public class UserServiceImpl implements UserService
 {
-	private UserDAOImpl userDAOImpl;
+	@Autowired
+	private UserDAO userDAOImpl;
 	
-	public void setUserDAOImpl(UserDAOImpl userDAOImpl)
+	public boolean registerUser(User user)
 	{
-		this.userDAOImpl = userDAOImpl;
+		boolean doesNotExist = true;
+		
+		User foundUser = userDAOImpl.getUserByUsername(user.getUsername());
+		
+		if (foundUser == null)
+			userDAOImpl.createNewUser(user);
+		else
+			doesNotExist = false;
+
+		return doesNotExist;
 	}
 	
-	public void createNewUser(User user)
+	public User authenticateUser(User user)
 	{
-		userDAOImpl.createNewUser(user);
-	}
-	
-	public User getUserByUsername(String username)
-	{
-		return userDAOImpl.getUserByUsername(username);
+		User userFromDb = userDAOImpl.getUserByUsername(user.getUsername());
+		
+		if (userFromDb != null && user.getPassword().equals(user))
+		{
+			user = userFromDb;
+			user.setAuthenticated(true);
+		}
+		
+		return user;
 	}
 }
