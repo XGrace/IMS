@@ -1,151 +1,117 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ include file="navbar.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home</title>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<style>
-body {
-  padding-top: 60px;
-}
-@media (max-width: 979px) {
-  body {
-    padding-top: 0px;
-  }
-}
-</style>
+<title>Admin Page</title>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-	<div class="container">
+<div class="container"><h1>Bootstrap  tab panel example (using nav-pills)  </h1></div>
+<div id="exTab1" class="container">	
+<ul  class="nav nav-pills">
+			<li class="active">
+        <a  href="#1a" data-toggle="tab">Overview</a>
+			</li>
+			<li><a href="#2a" data-toggle="tab">Using nav-pills</a>
+			</li>
+			<li><a href="#3a" data-toggle="tab">Applying clearfix</a>
+			</li>
+  		<li><a href="#4a" data-toggle="tab">Background color</a>
+			</li>
+		</ul>
 
-		<div class="page-header">
-			<h1>JX Tech</h1>
-		</div>
-				
-		<div class="jumbotron">
-			<h2 class="text-center">Inventory Management System</h2>
-		</div>
-		
-		<c:choose>
-			<c:when test="${message == 'invalid_credentials'}">
-				<div class="alert alert-danger">
-					<strong>Error:</strong> Invalid credentials.
+			<div class="tab-content clearfix">
+			  <div class="tab-pane active" id="1a">
+          <h3>Content's background color is the same for the tab</h3>
 				</div>
-			</c:when>
-			<c:when test="${message == 'invalid_reg_code' }">
-				<div class="alert alert-danger">
-					<strong>Error:</strong> Invalid registration code.
+				<div class="tab-pane" id="2a">
+          <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
 				</div>
-			</c:when>
-			<c:when test="${message == 'user_exists'}">
-				<div class="alert alert-danger">
-					<strong>Error:</strong> User already exists.
+        <div class="tab-pane" id="3a">
+          <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
 				</div>
-			</c:when>
-			<c:when test="${message == 'illegal_access'}">
-				<div class="alert alert-danger">
-					<strong>Error:</strong> You must log in first.
-				</div>
-			</c:when>
-			<c:when test="${message == 'straight_screwed_up'}">
-				<div class="alert alert-danger">
-					<strong>Error:</strong> You really screwed up somewhere.
-				</div>
-			</c:when>
-			<c:when test="${message == 'successful_registration'}">
-				<div class="alert alert-success">
-					<strong>Success:</strong> User registered.
-				</div>
-			</c:when>
-			<c:when test="${message == 'logout'}">
-				<div class="alert alert-info">
-					<strong>Info:</strong> Logged out.
-				</div>
-			</c:when>
-		</c:choose>
-		
-		<div class="row">
-			<div class="col-md-6">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="text-center">Returning User</h3>
-					</div>
-					
-					<div class="panel-body">
-						<form:form role="form" action="login" method="post" modelAttribute="user">
-							<div class="form-group">
-								<label for="login_username">Username*:</label>
-								<form:input class="form-control" path="username" id="login_username" required />
-							</div>
-		
-							<div class="form-group">
-								<label for="login_password">Password*:</label>
-								<form:password class="form-control" path="password" id="login_password" required />
-							</div>
-		
-							<div class="form-group">
-								<input class="form-control btn btn-primary" type="submit" name="option" value="Login">
-							</div>
-						</form:form>
-					</div>
-				</div>
-
-			</div>
-			<div class="col-md-6">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="text-center">New User</h3>
-					</div>
-					
-					<div class="panel-body">
-						<form:form role="form" action="register" method="post" modelAttribute="user">
-							<div class="form-group">
-								<label class="control-label" for="reg_username">Username*:</label>
-								<form:input class="form-control" path="username" id="reg_username" required />
-							</div>
-		
-							<div class="form-group">
-								<label for="reg_password">Password*:</label>
-								<form:password class="form-control" path="password" id="reg_password" required />
-							</div>
-		
-							<div class="form-group">
-								<label for="first_name">First Name*:</label>
-								<form:input class="form-control" path="firstName" id="first_name" required />
-							</div>
-		
-							<div class="form-group">
-								<label for="last_name">Last Name*:</label>
-								<form:input class="form-control" path="lastName" id="last_name" required />
-							</div>
-		
-							<div class="form-group">
-								<label for="email">Email*:</label>
-								<form:input class="form-control" path="email" id="email" required />
-							</div>
-
-							<%-- 	
-							<div class="form-group">
-								<label for="registration_code">Registration Code*:</label>
-								<input class="form-control" type="text" name="registration_code" id="registration_code" required>
-							</div>
-							--%>	
-		
-							<div class="form-group">
-								<input class="form-control btn btn-primary" type="submit" value="Register">
-							</div>
-						</form:form> 
-					</div>
+          <div class="tab-pane" id="4a">
+          <h3>We use css to change the background color of the content to be equal to the tab</h3>
 				</div>
 			</div>
-		</div>
-	</div>
+  </div>
+
+
+<hr></hr>
+<div class="container"><h2>Example tab 2 (using standard nav-tabs)</h2></div>
+
+<div id="exTab2" class="container">	
+<ul class="nav nav-tabs">
+			<li class="active">
+        <a  href="#1" data-toggle="tab">Overview</a>
+			</li>
+			<li><a href="#2" data-toggle="tab">Without clearfix</a>
+			</li>
+			<li><a href="#3" data-toggle="tab">Solution</a>
+			</li>
+		</ul>
+
+			<div class="tab-content ">
+			  <div class="tab-pane active" id="1">
+          <h3>Standard tab panel created on bootstrap using nav-tabs</h3>
+				</div>
+				<div class="tab-pane" id="2">
+          <h3>Notice the gap between the content and tab after applying a background color</h3>
+				</div>
+        <div class="tab-pane" id="3">
+          <h3>add clearfix to tab-content (see the css)</h3>
+				</div>
+			</div>
+  </div>
+
+<hr></hr>
+
+<div class="container"><h2>Example 3 </h2></div>
+<div id="exTab3" class="container">	
+<ul  class="nav nav-pills">
+			<li class="active">
+        <a  href="#1b" data-toggle="tab">Overview</a>
+			</li>
+			<li><a href="#2b" data-toggle="tab">Using nav-pills</a>
+			</li>
+			<li><a href="#3b" data-toggle="tab">Applying clearfix</a>
+			</li>
+  		<li><a href="#4a" data-toggle="tab">Background color</a>
+			</li>
+		</ul>
+
+			<div class="tab-content clearfix">
+			  <div class="tab-pane active" id="1b">
+          <h3>Same as example 1 but we have now styled the tab's corner</h3>
+				</div>
+				<div class="tab-pane" id="2b">
+          <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
+				</div>
+        <div class="tab-pane" id="3b">
+          <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
+				</div>
+          <div class="tab-pane" id="4b">
+          <h3>We use css to change the background color of the content to be equal to the tab</h3>
+				</div>
+			</div>
+  </div>
+
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
 </body>
-
 </html>

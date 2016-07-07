@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService
 	{
 		User userFromDb = userDAOImpl.getUserByUsername(user.getUsername());
 		
-		if (userFromDb != null && user.getPassword().equals(user))
+		if (userFromDb != null && userFromDb.getPassword().equals(user.getPassword()))
 		{
 			user = userFromDb;
 			user.setAuthenticated(true);

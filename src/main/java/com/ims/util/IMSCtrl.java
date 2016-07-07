@@ -16,11 +16,11 @@ public class IMSCtrl
 	@Autowired
 	private UserService userServiceImpl;
 	
-	@RequestMapping(value="/home", method={RequestMethod.GET})
+	@RequestMapping(value="/index", method={RequestMethod.GET})
 	public ModelAndView viewHome()
 	{
-		System.out.println("In viewHome()");
-		return new ModelAndView("home", "user", new User());
+		System.out.println("In viewIndex()");
+		return new ModelAndView("index", "user", new User());
 	}
 	
 	@RequestMapping(value="/login", method={RequestMethod.POST})
@@ -29,10 +29,10 @@ public class IMSCtrl
 		System.out.println("In viewLogin()");
 		
 		if (userServiceImpl.authenticateUser(user) != null)
-			return new ModelAndView("main", "user", user);
+			return new ModelAndView("home", "user", user);
 		else
 		{
-			ModelAndView mv = new ModelAndView();
+			ModelAndView mv = new ModelAndView("index");
 			mv.addObject("message", "invalid_credentials");
 			return mv;
 		}
