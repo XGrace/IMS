@@ -42,18 +42,6 @@
 		      <div id="my_side_tabs" class="tab-content side-tabs side-tabs-left">
 		        <div class="tab-pane fade in active" id="web-dev" role="tabpanel">
  		        	<div class="col-sm-6"> 
-<!-- 		        		<h3>Custom Web Design</h3> -->
-<!-- 		        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> -->
-<!-- 		        		<ul> -->
-<!-- 		        			<li>Responsive</li> -->
-<!-- 		        			<li>Search Engine Optimization (SEO)</li> -->
-<!-- 		        			<li>W3C Compliant</li> -->
-<!-- 		        			<li>Custom CMS</li> -->
-<!-- 		        			<li>Hosting</li> -->
-<!-- 		        			<li>Webmaster Services</li> -->
-<!-- 		        			<li>Content Writing</li> -->
-<!-- 		        		</ul> -->
-<!-- 		        	</div> -->
 
 						<div id="exTab2" class="container">	
 						<ul class="nav nav-tabs">
@@ -82,7 +70,46 @@
 					
 								<div class="tab-content ">
 								  <div class="tab-pane active" id="1">
-					          <h3>CPU</h3>
+								  <div class="row masonry-container">
+
+							          <div class="col-md-4 col-sm-6 item">
+							            <div class="thumbnail">
+							              <img src="/IMS/resources/images/i74790k.jpg" alt="">
+							              <div class="caption">
+							                <h3>Thumbnail label</h3>
+							                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+							                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+							              </div>
+							            </div>
+							          </div><!--/.item  -->
+							
+							
+							          <div class="col-md-4 col-sm-6 item">
+							            <div class="thumbnail">
+							              <img src="/IMS/resources/images/8350black.jpg" alt="">
+							              <div class="caption">
+							                <h3>Thumbnail label</h3>
+							                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+							                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+							              </div>
+							            </div>
+							          </div><!--/.item  -->
+							
+							
+							          <div class="col-md-4 col-sm-6 item">
+							            <div class="thumbnail">
+							              <img src="/IMS/resources/images/g3258.jpg" alt="">
+							              <div class="caption">
+							                <h3>Thumbnail label</h3>
+							                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+							              </div>
+							            </div>
+							          </div><!--/.item  -->
+							
+							
+							        </div> <!--/.masonry-container  -->
+<!-- 					          <h3>CPU</h3> -->
 									</div>
 									<div class="tab-pane" id="2">
 					          <h3>Graphics Card</h3>
@@ -229,5 +256,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/IMS/resources/js/home.js"></script>
+	<script type="text/javascript" src="/IMS/resources/js/home2.js"></script>
 	
 </html>

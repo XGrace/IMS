@@ -10,12 +10,16 @@
 /*   padding : 5px 15px; */
 /* } */
 
+.p {
+  text-align: center;
+}
+
 .tab-container {
 	background: #344152;
 	padding: 0;
 	border: solid 1px #444;
 	height: 600px;
-/* 	overflow: hidden; */
+	overflow: hidden;
 	width: 100%;
 }
 .nav-tabs.nav-tabs-left {
@@ -79,7 +83,7 @@
 .tab-content.side-tabs .tab-pane {
   display: none;
   padding: 20px;
-/*   overflow-y: auto; */
+  overflow-y: auto;
 }
 .tab-content.side-tabs-left {
   margin-left: 45px;
