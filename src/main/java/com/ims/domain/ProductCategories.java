@@ -1,5 +1,7 @@
 package com.ims.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -9,8 +11,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="PRODUCT_CATEGORIES")
-public class ProductCategories
+public class ProductCategories implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6886135279505843863L;
+
 	@Id
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="PRODUCT_UPC", referencedColumnName="PRODUCT_UPC")
