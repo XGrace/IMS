@@ -7,8 +7,13 @@ import com.ims.domain.Product;
 public interface ProductDAO
 {
 	public void createNewProduct(Product product);
+	
+	public void removeProductById(Long id);
 	public void removeProductByName(String name);
+	
+	public Product getProductById(Long id);
 	public Product getProductByName(String name);
-	public Product getProducyByShortName(String shortName);
+	public Product getProductByShortName(String shortName);
+	
 	public List<Product> getAllProducts();
 }

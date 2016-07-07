@@ -16,47 +16,58 @@ public class StateAbbrv
 	@Column(name="ABBRV_ID")
 	@SequenceGenerator(name="stateAbbrvSeq", sequenceName="IMS_STATE_ABBRV_SEQ", allocationSize=1)
 	@GeneratedValue(generator="stateAbbrvSeq", strategy=GenerationType.SEQUENCE)
-	private Long id;
+	private Long abbrvId;
 	
 	@Column(name="STATE_NAME")
-	private String name;
+	private String stateName;
 	
 	@Column(name="STATE_ABBRV")
-	private String abbrv;
+	private String stateAbbrv;
 
 	@Override
 	public String toString()
 	{
-		return "StateAbbrv [id=" + id + ", name=" + name + ", abbrv=" + abbrv + "]";
+		return "StateAbbrv [abbrvId=" + abbrvId + ", stateName=" + stateName + ", stateAbbrv=" + stateAbbrv + "]";
+	}
+	
+	public StateAbbrv()
+	{
 	}
 
-	public Long getId()
+	public StateAbbrv(Long abbrvId, String stateName, String stateAbbrv)
 	{
-		return id;
+		this.abbrvId = abbrvId;
+		this.stateName = stateName;
+		this.stateAbbrv = stateAbbrv;
 	}
 
-	public void setId(Long id)
+	public Long getAbbrvId()
 	{
-		this.id = id;
+		return abbrvId;
 	}
 
-	public String getName()
+	public void setAbbrvId(Long abbrvId)
 	{
-		return name;
+		this.abbrvId = abbrvId;
 	}
 
-	public void setName(String name)
+	public String getStateName()
 	{
-		this.name = name;
+		return stateName;
 	}
 
-	public String getAbbrv()
+	public void setStateName(String stateName)
 	{
-		return abbrv;
+		this.stateName = stateName;
 	}
 
-	public void setAbbrv(String abbrv)
+	public String getStateAbbrv()
 	{
-		this.abbrv = abbrv;
+		return stateAbbrv;
+	}
+
+	public void setStateAbbrv(String stateAbbrv)
+	{
+		this.stateAbbrv = stateAbbrv;
 	}
 }

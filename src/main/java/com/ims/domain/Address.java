@@ -2,9 +2,12 @@ package com.ims.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -27,8 +30,9 @@ public class Address
 	@Column(name="ADDRESS_CITY")
 	private String city;
 	
-	@Column(name="STATE_ID")
-	private Long stateId;
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="STATE_ID", referencedColumnName="ABBRV_ID")
+	private StateAbbrv stateAbbrv;
 	
 	@Column(name="ADDRESS_ZIP")
 	private String addressZip;
@@ -37,21 +41,21 @@ public class Address
 	public String toString()
 	{
 		return "Address [addressId=" + addressId + ", streetAddress1=" + streetAddress1 + ", streetAddress2="
-				+ streetAddress2 + ", city=" + city + ", stateId=" + stateId + ", addressZip=" + addressZip + "]";
+				+ streetAddress2 + ", city=" + city + ", stateAbbrv=" + stateAbbrv + ", addressZip=" + addressZip + "]";
 	}
 
 	public Address()
 	{
 	}
 
-	public Address(Long addressId, String streetAddress1, String streetAddress2, String city, Long stateId,
+	public Address(Long addressId, String streetAddress1, String streetAddress2, String city, StateAbbrv stateAbbrv,
 			String addressZip)
 	{
 		this.addressId = addressId;
 		this.streetAddress1 = streetAddress1;
 		this.streetAddress2 = streetAddress2;
 		this.city = city;
-		this.stateId = stateId;
+		this.stateAbbrv = stateAbbrv;
 		this.addressZip = addressZip;
 	}
 
@@ -95,14 +99,14 @@ public class Address
 		this.city = city;
 	}
 
-	public Long getStateId()
+	public StateAbbrv getStateAbbrv()
 	{
-		return stateId;
+		return stateAbbrv;
 	}
 
-	public void setStateId(Long stateId)
+	public void setStateAbbrv(StateAbbrv stateAbbrv)
 	{
-		this.stateId = stateId;
+		this.stateAbbrv = stateAbbrv;
 	}
 
 	public String getAddressZip()

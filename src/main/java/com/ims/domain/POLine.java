@@ -2,9 +2,12 @@ package com.ims.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -13,11 +16,13 @@ import javax.persistence.Table;
 public class POLine
 {
 	@Id
-	@Column(name="ORDER_NUMBER")
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="ORDER_NUMBER", referencedColumnName="ORDER_NUMBER")
+	private PurchaseOrder purchaseOrder;
+	
+	@Id
 	@SequenceGenerator(name="POLineSeq", sequenceName="IMS_PO_LINE_SEQ", allocationSize=1)
 	@GeneratedValue(generator="POLineSeq", strategy=GenerationType.SEQUENCE)
-	private Long orderNumber;
-	
 	@Column(name="LINE_NUMBER")
 	private Long lineNumber;
 	
@@ -27,39 +32,40 @@ public class POLine
 	@Column(name="QUANTITY_ORDERED")
 	private Long quantityOrdered;
 	
-	@Column(name="PRODUCT_UPC")
-	private Long productUpc;
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="PRODUCT_UPC", referencedColumnName="PRODUCT_UPC")
+	private Product product;
 	
 	@Override
 	public String toString()
 	{
-		return "POLine [orderNumber=" + orderNumber + ", lineNumber=" + lineNumber + ", unitPrice=" + unitPrice
-				+ ", quantityOrdered=" + quantityOrdered + ", productUpc=" + productUpc + "]";
+		return "POLine [purchaseOrder=" + purchaseOrder + ", lineNumber=" + lineNumber + ", unitPrice=" + unitPrice
+				+ ", quantityOrdered=" + quantityOrdered + ", product=" + product + "]";
 	}
 
 	public POLine()
 	{
 	}
-	
-	public POLine(Long orderNumber, Long lineNumber, Double unitPrice, Long quantityOrdered, Long productUpc)
+		
+	public POLine(PurchaseOrder purchaseOrder, Long lineNumber, Double unitPrice, Long quantityOrdered, Product product)
 	{
-		this.orderNumber = orderNumber;
+		this.purchaseOrder = purchaseOrder;
 		this.lineNumber = lineNumber;
 		this.unitPrice = unitPrice;
 		this.quantityOrdered = quantityOrdered;
-		this.productUpc = productUpc;
+		this.product = product;
 	}
-	
-	public Long getOrderNumber()
+
+	public PurchaseOrder getPurchaseOrder()
 	{
-		return orderNumber;
+		return purchaseOrder;
 	}
-	
-	public void setOrderNumber(Long orderNumber)
+
+	public void setPurchaseOrder(PurchaseOrder purchaseOrder)
 	{
-		this.orderNumber = orderNumber;
+		this.purchaseOrder = purchaseOrder;
 	}
-	
+
 	public Long getLineNumber()
 	{
 		return lineNumber;
@@ -90,13 +96,13 @@ public class POLine
 		this.quantityOrdered = quantityOrdered;
 	}
 	
-	public Long getProductUpc()
+	public Product getProduct()
 	{
-		return productUpc;
+		return product;
 	}
-	
-	public void setProductUpc(Long productUpc)
+
+	public void setProduct(Product product)
 	{
-		this.productUpc = productUpc;
+		this.product = product;
 	}
 }

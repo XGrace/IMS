@@ -2,9 +2,12 @@ package com.ims.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -33,18 +36,20 @@ public class Client
 	@Column(name="CLIENT_FAX")
 	private String clientFax;
 	
-	@Column(name="ADDRESS_ID")
-	private Long addressId;
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="ADDRESS_ID", referencedColumnName="IMS_ADDRESS_ID")
+	private Address address;
 	
-	@Column(name="CLIENT_TYPE_ID")
-	private Long clientTypeId;
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="CLIENT_TYPE_ID", referencedColumnName="CLIENT_TYPE_ID")
+	private Client client;
 
 	@Override
 	public String toString()
 	{
 		return "Client [clientId=" + clientId + ", clientName=" + clientName + ", clientEmail=" + clientEmail
 				+ ", pointOfContactName=" + pointOfContactName + ", clientPhone=" + clientPhone + ", clientFax="
-				+ clientFax + ", addressId=" + addressId + ", clientTypeId=" + clientTypeId + "]";
+				+ clientFax + ", address=" + address + ", client=" + client + "]";
 	}
 
 	public Client()
@@ -52,7 +57,7 @@ public class Client
 	}
 
 	public Client(Long clientId, String clientName, String clientEmail, String pointOfContactName, String clientPhone,
-			String clientFax, Long addressId, Long clientTypeId)
+			String clientFax, Address address, Client client)
 	{
 		this.clientId = clientId;
 		this.clientName = clientName;
@@ -60,8 +65,8 @@ public class Client
 		this.pointOfContactName = pointOfContactName;
 		this.clientPhone = clientPhone;
 		this.clientFax = clientFax;
-		this.addressId = addressId;
-		this.clientTypeId = clientTypeId;
+		this.address = address;
+		this.client = client;
 	}
 
 	public Long getClientId()
@@ -124,23 +129,23 @@ public class Client
 		this.clientFax = clientFax;
 	}
 
-	public Long getAddressId()
+	public Address getAddress()
 	{
-		return addressId;
+		return address;
 	}
 
-	public void setAddressId(Long addressId)
+	public void setAddress(Address address)
 	{
-		this.addressId = addressId;
+		this.address = address;
 	}
 
-	public Long getClientTypeId()
+	public Client getClient()
 	{
-		return clientTypeId;
+		return client;
 	}
 
-	public void setClientTypeId(Long clientTypeId)
+	public void setClient(Client client)
 	{
-		this.clientTypeId = clientTypeId;
+		this.client = client;
 	}
 }

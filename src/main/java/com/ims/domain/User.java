@@ -17,7 +17,7 @@ public class User
 	@Column(name="IMS_USERS_ID")
 	@SequenceGenerator(name="userSeq", sequenceName="IMS_USERS_SEQ", allocationSize=1)
 	@GeneratedValue(generator="userSeq", strategy=GenerationType.SEQUENCE)
-	private Long UserId;
+	private Long userId;
 	
 	@Column(name="IMS_USERNAME")
 	private String username;
@@ -40,7 +40,7 @@ public class User
 	@Override
 	public String toString()
 	{
-		return "User [UserId=" + UserId + ", username=" + username + ", password=" + password + ", firstName="
+		return "User [UserId=" + userId + ", username=" + username + ", password=" + password + ", firstName="
 				+ firstName + ", lastName=" + lastName + ", email=" + email + ", authenticated=" + authenticated + "]";
 	}
 
@@ -51,7 +51,7 @@ public class User
 	public User(Long userId, String username, String password, String firstName, String lastName, String email,
 			Boolean authenticated)
 	{
-		UserId = userId;
+		this.userId = userId;
 		this.username = username;
 		this.password = password;
 		this.firstName = firstName;
@@ -62,12 +62,12 @@ public class User
 
 	public Long getUserId()
 	{
-		return UserId;
+		return userId;
 	}
 
 	public void setUserId(Long userId)
 	{
-		UserId = userId;
+		this.userId = userId;
 	}
 
 	public String getUsername()

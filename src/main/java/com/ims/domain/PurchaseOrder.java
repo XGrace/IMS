@@ -4,9 +4,12 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -32,14 +35,15 @@ public class PurchaseOrder
 	@Column(name="PO_TOTAL")
 	private Double poTotal;
 	
-	@Column(name="CLIENT_ID")
-	private Long clientId;
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="CLIENT_ID", referencedColumnName="IMS_CLIENT_ID")
+	private Client client;
 
 	@Override
 	public String toString()
 	{
 		return "PurchaseOrder [orderNumber=" + orderNumber + ", subtotal=" + subtotal + ", purchaseDate=" + purchaseDate
-				+ ", taxAmount=" + taxAmount + ", poTotal=" + poTotal + ", clientId=" + clientId + "]";
+				+ ", taxAmount=" + taxAmount + ", poTotal=" + poTotal + ", client=" + client + "]";
 	}
 
 	public PurchaseOrder()
@@ -47,14 +51,14 @@ public class PurchaseOrder
 	}
 
 	public PurchaseOrder(Long orderNumber, Double subtotal, Date purchaseDate, Double taxAmount, Double poTotal,
-			Long clientId)
+			Client client)
 	{
 		this.orderNumber = orderNumber;
 		this.subtotal = subtotal;
 		this.purchaseDate = purchaseDate;
 		this.taxAmount = taxAmount;
 		this.poTotal = poTotal;
-		this.clientId = clientId;
+		this.client = client;
 	}
 
 	public Long getOrderNumber()
@@ -107,13 +111,13 @@ public class PurchaseOrder
 		this.poTotal = poTotal;
 	}
 
-	public Long getClientId()
+	public Client getClient()
 	{
-		return clientId;
+		return client;
 	}
 
-	public void setClientId(Long clientId)
+	public void setClient(Client client)
 	{
-		this.clientId = clientId;
-	}	
+		this.client = client;
+	}
 }

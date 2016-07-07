@@ -1,5 +1,7 @@
 package com.ims.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +27,36 @@ public class UserServiceImpl implements UserService
 			doesNotExist = false;
 
 		return doesNotExist;
+	}
+	
+	@Override
+	public void removeUserById(Long id)
+	{
+		userDAOImpl.removeUserById(id);
+	}
+	
+	@Override
+	public void removeUserByUsername(String username)
+	{
+		userDAOImpl.removeUserByUsername(username);
+	}
+	
+	@Override
+	public User getUserById(Long id)
+	{
+		return userDAOImpl.getUserById(id);
+	}
+	
+	@Override
+	public User getUserByUsername(String username)
+	{
+		return userDAOImpl.getUserByUsername(username);
+	}
+	
+	@Override
+	public List<User> getAllUsers()
+	{
+		return userDAOImpl.getAllUsers();
 	}
 	
 	@Override

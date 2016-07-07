@@ -23,6 +23,18 @@ public class ProductDAOImpl implements ProductDAO
 	{
 		sessionFactory.getCurrentSession().save(product);
 	}
+	
+	@Override 
+	public void removeProductById(Long id)
+	{
+		Session session = sessionFactory.getCurrentSession();
+
+		Query query = session.createQuery("delete from Product where productId = :id");
+		
+		query.setLong("id", id);
+		
+		query.executeUpdate();			
+	}
 
 	@Override
 	public void removeProductByName(String name)
@@ -37,13 +49,29 @@ public class ProductDAOImpl implements ProductDAO
 	}
 	
 	@Override
+	public Product getProductById(Long id)
+	{
+		Product product = null;
+		
+		Session session = sessionFactory.getCurrentSession();
+		
+		Query query = session.createQuery("from Product where productId = :id");
+		
+		query.setLong("id", id);
+		
+		product = (Product) query.uniqueResult();
+		
+		return product;		
+	}
+	
+	@Override
 	public Product getProductByName(String name)
 	{
 		Product product = null;
 		
 		Session session = sessionFactory.getCurrentSession();
 		
-		Query query = session.createQuery("from Product where name = :name");
+		Query query = session.createQuery("from Product where productName = :name");
 		
 		query.setString("name", name);
 		
@@ -53,7 +81,7 @@ public class ProductDAOImpl implements ProductDAO
 	}
 
 	@Override
-	public Product getProducyByShortName(String shortName)
+	public Product getProductByShortName(String shortName)
 	{
 		Product product = null;
 		
