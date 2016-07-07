@@ -17,20 +17,28 @@ public class IMSCtrl
 	private UserService userServiceImpl;
 	
 	@RequestMapping(value="/home", method={RequestMethod.GET})
-	public String viewHome()
+	public ModelAndView viewHome()
 	{
 		System.out.println("In viewHome()");
-		return "home";
+		return new ModelAndView("home", "user", new User());
 	}
 	
 	@RequestMapping(value="/login", method={RequestMethod.POST})
 	public ModelAndView viewLogin(@ModelAttribute User user)
 	{
 		System.out.println("In viewLogin()");
-		return new ModelAndView("main", "user", user);
+		
+		if (userServiceImpl.authenticateUser(user) != null)
+			return new ModelAndView("main", "user", user);
+		else
+		{
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("message", "invalid_credentials");
+			return mv;
+		}
 	}
 	
-	@RequestMapping(value="/register", method={RequestMethod.GET})
+	@RequestMapping(value="/register", method={RequestMethod.POST})
 	public ModelAndView registerUser(@ModelAttribute User user)
 	{
 		ModelAndView mv = new ModelAndView();
@@ -41,7 +49,6 @@ public class IMSCtrl
 		else
 			mv.addObject("message", "user_exists");
 
-		
 		return mv;
 	}
 	

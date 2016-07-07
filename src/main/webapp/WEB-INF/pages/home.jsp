@@ -122,7 +122,7 @@ body {
 		
 							<div class="form-group">
 								<label for="last_name">Last Name*:</label>
-								<form:input class="form-control" path="secondName" id="last_name" required />
+								<form:input class="form-control" path="lastName" id="last_name" required />
 							</div>
 		
 							<div class="form-group">

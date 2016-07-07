@@ -7,51 +7,51 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
-@Table(name="")
+@Table(name="IMS_USERS")
 public class User
 {
 	@Id
-	@Column(name="")
-	@SequenceGenerator(name="userSeq", sequenceName="user_seq", allocationSize=1)
+	@Column(name="IMS_USERS_ID")
+	@SequenceGenerator(name="userSeq", sequenceName="IMS_USERS_SEQ", allocationSize=1)
 	@GeneratedValue(generator="userSeq", strategy=GenerationType.SEQUENCE)
-	private Long id;
+	private Long UserId;
 	
-	@Column(name="")
+	@Column(name="IMS_USERNAME")
 	private String username;
 	
-	@Column(name="")
+	@Column(name="IMS_PASSWORD")
 	private String password;
 	
-	@Column(name="")
+	@Column(name="USER_FIRST_NAME")
 	private String firstName;
 	
-	@Column(name="")
+	@Column(name="USER_LAST_NAME")
 	private String lastName;
 	
-	@Column(name="")
+	@Column(name="USER_EMAIL")
 	private String email;
 	
+	@Transient
 	private Boolean authenticated;
 	
 	@Override
 	public String toString()
 	{
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", firstName=" + firstName
-				+ ", lastName=" + lastName + ", email=" + email + ", authenticated=" + authenticated + "]";
+		return "User [UserId=" + UserId + ", username=" + username + ", password=" + password + ", firstName="
+				+ firstName + ", lastName=" + lastName + ", email=" + email + ", authenticated=" + authenticated + "]";
 	}
 
 	public User() 
 	{
-		
 	}
 
-	public User(Long id, String username, String password, String firstName, String lastName, String email,
+	public User(Long userId, String username, String password, String firstName, String lastName, String email,
 			Boolean authenticated)
 	{
-		super();
-		this.id = id;
+		UserId = userId;
 		this.username = username;
 		this.password = password;
 		this.firstName = firstName;
@@ -60,14 +60,14 @@ public class User
 		this.authenticated = authenticated;
 	}
 
-	public Long getId()
+	public Long getUserId()
 	{
-		return id;
+		return UserId;
 	}
 
-	public void setId(Long id)
+	public void setUserId(Long userId)
 	{
-		this.id = id;
+		UserId = userId;
 	}
 
 	public String getUsername()

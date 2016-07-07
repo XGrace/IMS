@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ims.dao.UserDAO;
-import com.ims.dao.UserDAOImpl;
 import com.ims.domain.User;
 
 @Service
@@ -13,6 +12,7 @@ public class UserServiceImpl implements UserService
 	@Autowired
 	private UserDAO userDAOImpl;
 	
+	@Override
 	public boolean registerUser(User user)
 	{
 		boolean doesNotExist = true;
@@ -27,6 +27,7 @@ public class UserServiceImpl implements UserService
 		return doesNotExist;
 	}
 	
+	@Override
 	public User authenticateUser(User user)
 	{
 		User userFromDb = userDAOImpl.getUserByUsername(user.getUsername());
@@ -35,8 +36,9 @@ public class UserServiceImpl implements UserService
 		{
 			user = userFromDb;
 			user.setAuthenticated(true);
+			return user;
 		}
-		
-		return user;
+		else
+			return null;
 	}
 }
