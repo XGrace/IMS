@@ -1,5 +1,7 @@
 package com.ims.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,8 +15,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="IMS_PO_LINE")
-public class POLine
+public class POLine implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8322086499610827786L;
+
 	@Id
 	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="ORDER_NUMBER", referencedColumnName="ORDER_NUMBER")
