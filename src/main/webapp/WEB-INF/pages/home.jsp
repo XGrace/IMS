@@ -12,250 +12,367 @@
 </head>
 <body>
 
-<div class="container">
-	<div class="row">
-   		<div class="col-sm-12">
-   			<h2>JXTech Inventory Management</h2>
-   			<div class="tab-container">
-		      <ul class="nav nav-tabs nav-tabs-left nav-centered" role="tablist">
-		        <li role="presentation" class="active">
-		          <a href="#web-dev" data-toggle="tab" role="tab">
-		            Products
-		          </a>
-		        </li>
-		        <li role="presentation">
-		          <a href="#graphic" data-toggle="tab" role="tab">
-		            Clients
-		          </a>
-		        </li>
-		        <li role="presentation">
-		          <a href="#marketing" data-toggle="tab" role="tab">
-		            Invoices
-		          </a>
-		        </li>
-		        <li role="presentation">
-		          <a href="#business" data-toggle="tab" role="tab">
-		            Charts
-		          </a>
-		        </li>
-		      </ul>
-		      <div id="my_side_tabs" class="tab-content side-tabs side-tabs-left">
-		        <div class="tab-pane fade in active" id="web-dev" role="tabpanel">
- 		        	<div class="col-sm-6"> 
-
-						<div id="exTab2" class="container">	
-						<ul class="nav nav-tabs">
-								<li class="active">
-					        <a  href="#1" data-toggle="tab">CPU</a>
-								</li>
-								<li><a href="#2" data-toggle="tab">GPU</a>
-								</li>
-								<li><a href="#3" data-toggle="tab">Motherboard</a>
-								</li>
-								<li><a href="#4" data-toggle="tab">Hard Drive</a>
-								</li>
-								<li><a href="#5" data-toggle="tab">SSD</a>
-								</li>
-								<li><a href="#6" data-toggle="tab">RAM</a>
-								</li>
-								<li><a href="#7" data-toggle="tab">Power Supply</a>
-								</li>
-								<li><a href="#8" data-toggle="tab">Mouse</a>
-								</li>
-								<li><a href="#9" data-toggle="tab">Keyboard</a>
-								</li>
-								<li><a href="#10" data-toggle="tab">Monitor</a>
-								</li>
-							</ul>
-					
-								<div class="tab-content ">
-								  <div class="tab-pane active" id="1">
-								  <div class="row masonry-container">
-
-							          <div class="col-md-4 col-sm-6 item">
-							            <div class="thumbnail">
-							              <img src="/IMS/resources/images/i74790k.jpg" alt="">
-							              <div class="caption">
-							                <h3>Thumbnail label</h3>
-							                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-							                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-							              </div>
-							            </div>
-							          </div><!--/.item  -->
-							
-							
-							          <div class="col-md-4 col-sm-6 item">
-							            <div class="thumbnail">
-							              <img src="/IMS/resources/images/8350black.jpg" alt="">
-							              <div class="caption">
-							                <h3>Thumbnail label</h3>
-							                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-							                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-							              </div>
-							            </div>
-							          </div><!--/.item  -->
-							
-							
-							          <div class="col-md-4 col-sm-6 item">
-							            <div class="thumbnail">
-							              <img src="/IMS/resources/images/g3258.jpg" alt="">
-							              <div class="caption">
-							                <h3>Thumbnail label</h3>
-							                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-							                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-							              </div>
-							            </div>
-							          </div><!--/.item  -->
-							
-							
-							        </div> <!--/.masonry-container  -->
-<!-- 					          <h3>CPU</h3> -->
-									</div>
-									<div class="tab-pane" id="2">
-					          <h3>Graphics Card</h3>
-									</div>
-					        <div class="tab-pane" id="3">
-					          <h3>Motherboards</h3>
-									</div>
-									<div class="tab-pane" id="4">
-					          <h3>Hard Drives</h3>
-									</div>
-									<div class="tab-pane" id="5">
-					          <h3>SSD</h3>
-									</div>
-									<div class="tab-pane" id="6">
-					          <h3>RAM</h3>
-									</div>
-									<div class="tab-pane" id="7">
-					          <h3>Power Supply</h3>
-									</div>
-									<div class="tab-pane" id="8">
-					          <h3>Mouse</h3>
-									</div>
-									<div class="tab-pane" id="9">
-					          <h3>Keyboards</h3>
-									</div>
-									<div class="tab-pane" id="10">
-					          <h3>Monitors</h3>
-									</div>
-		
-							</div>
-					  	</div>
-				  	</div>
-		
-<!-- 		        	<div class="col-sm-6"> -->
-<!-- 		        		<h3>eCommerce</h3> -->
-<!-- 		        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p> -->
-<!-- 		        		<ul> -->
-<!-- 		        			<li>Shopify</li> -->
-<!-- 		        			<li>WordPress</li> -->
-<!-- 		        			<li>Paypal</li> -->
-<!-- 		        		</ul> -->
-<!-- 		        	</div> -->
-<!-- 		        	<div class="col-sm-6"> -->
-		        		
-<!-- 		        	</div> -->
-		        </div>
-		        <div class="tab-pane fade" id="graphic" role="tabpanel">
-		        	<div class="col-sm-6">
-		        		<h3>UI/UX Designs</h3>
-		        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		        		<ul>
-		        			<li>Smartphone &amp; Tablet UI</li>
-		        			<li>Responsive Website UI</li>
-		        		</ul>
-		        	</div>
-		        	<div class="col-sm-6">
-		        		<h3>Logos</h3>
-		        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		        	</div>
-		        </div>
-		        <div class="tab-pane fade" id="marketing" role="tabpanel">
-					<div class="col-sm-6">
-		        		<h3>Online Advertising</h3>
-		        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		        		<ul>
-		        			<li>Facebook</li>
-		        			<li>Google AdWords</li>
-		        			<li>YouTube Ads</li>
-		        			<li>Custom Ads</li>
-		        		</ul>
-		        	</div>
-		        	<div class="col-sm-6">
-		        		<h3>Social Media</h3>
-		        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		        		<ul>
-		        			<li>Blogging</li>
-		        			<li>Facebook</li>
-		        			<li>Twitter</li>
-		        			<li>LinkedIn</li>
-		        			<li>Instagram</li>
-		        			<li>Pinterest</li>
-		        		</ul>
-		        	</div>
-		        	<div class="col-sm-6">
-		        		<h3>Fundraising</h3>
-		        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		        	</div>
-		        </div>
-		        <div class="tab-pane fade" id="business" role="tabpanel">
-		        	<div class="col-sm-6">
-		        		<h3>Consulting</h3>
-		        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		        		<ul>
-		        			<li>Company Branding</li>
-		        			<li>Website Security</li>
-		        			<li>Computer IT &amp; Repair</li>
-		        			<li>Data Storage</li>
-		        		</ul>
-		        	</div>
-		        	<div class="col-sm-6">
-		        		<h3>Analytics &amp; Reporting</h3>
-		        		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		        	</div>
-		        </div>
-		      </div>
-		    </div>
-		</div>
-	</div>
-</div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">JXTech</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">Products</a></li>
+        <li><a href="#contact">Clients</a></li>
+        <li><a href="#invoices">Invoices</a></li>
+        <li><a href="#charts">Charts</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
 
 
+ 
 
-<!-- <div class="container"><h2>Product List</h2></div> -->
 
-<!-- <div id="exTab2" class="container">	 -->
-<!-- 	<ul class="nav nav-tabs"> -->
-<!-- 			<li class="active"> -->
-<!--         <a  href="#1" data-toggle="tab">CPU's</a> -->
-<!-- 			</li> -->
-<!-- 			<li><a href="#2" data-toggle="tab">Motherboards</a> -->
-<!-- 			</li> -->
-<!-- 			<li><a href="#3" data-toggle="tab">Graphics Cards</a> -->
-<!-- 			</li> -->
-<!-- 		</ul> -->
+<div class="container main-container">
 
-<!-- 			<div class="tab-content "> -->
-<!-- 			  <div class="tab-pane active" id="1"> -->
-<!--           <h3>Standard tab panel created on bootstrap using nav-tabs</h3> -->
-<!-- 				</div> -->
-<!-- 				<div class="tab-pane" id="2"> -->
-<!--           <h3>Notice the gap between the content and tab after applying a background color</h3> -->
-<!-- 				</div> -->
-<!--         <div class="tab-pane" id="3"> -->
-<!--           <h3>add clearfix to tab-content (see the css)</h3> -->
-<!-- 				</div> -->
-<!-- 		</div> -->
-<!--   </div> -->
+  <div role="tabpanel">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#panel-1" aria-controls="panel-1" role="tab" data-toggle="tab">CPU</a></li>
+      <li role="presentation"><a href="#panel-2" aria-controls="panel-2" role="tab" data-toggle="tab">GPU</a></li>
+      <li role="presentation"><a href="#panel-3" aria-controls="panel-3" role="tab" data-toggle="tab">Motherboard</a></li>
+      <li role="presentation"><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab">Hard Drive</a></li>
+      <li role="presentation"><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab">SSD</a></li>
+      <li role="presentation"><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab">RAM</a></li>
+      <li role="presentation"><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab">Power Supply</a></li>
+      <li role="presentation"><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab">Mouse</a></li>
+      <li role="presentation"><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab">Keyboard</a></li>
+      <li role="presentation"><a href="#panel-4" aria-controls="panel-4" role="tab" data-toggle="tab">Monitor</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      <div role="tabpanel" class="tab-pane active" id="panel-1">
+        <div class="row masonry-container">
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="/IMS/resources/images/i74790k.jpg" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a>
+                Quanity<select>
+				  <option value="pack1">5</option>
+				  <option value="pack2">10</option>
+				  <option value="pack3">15</option>
+				  <option value="pack4">20</option>
+				</select></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="/IMS/resources/images/8350black.jpg" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+          
+		  <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="/IMS/resources/images/g3258.jpg" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+          
+          
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="/IMS/resources/images/i74790k.jpg" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="/IMS/resources/images/8350black.jpg" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+          
+		  <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="/IMS/resources/images/g3258.jpg" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+          
+          
+          
+          
+          
+        </div> <!--/.masonry-container  -->
+      </div><!--/.tab-panel -->
+
+      <div role="tabpanel" class="tab-pane" id="panel-2">
+
+        <div class="row masonry-container">
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/city" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/city" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/city" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/city" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/city" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div> <!--/.masonry-container  -->
+
+      </div><!--/.tab-panel -->
+
+      <div role="tabpanel" class="tab-pane" id="panel-3">
+        <div class="row masonry-container">
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/nature" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/nature" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/nature" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/nature" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/nature" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div> <!--/.masonry-container  -->
+      </div><!--/.tab-panel -->
+
+      <div role="tabpanel" class="tab-pane" id="panel-4">
+        <div class="row masonry-container">
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/cats" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/cats" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/cats" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/cats" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div><!--/.item  -->
+
+          <div class="col-md-4 col-sm-6 item">
+            <div class="thumbnail">
+              <img src="http://lorempixel.com/200/200/cats" alt="">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore enim quas.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div> <!--/.masonry-container  -->
+      </div><!--/.tab-panel -->
+
+    </div> <!--/.tab-content -->
+
+  </div> <!--/.tab-panel  -->
+
+</div><!-- /.container -->
+
 
 </body>
 
 <!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/IMS/resources/js/home.js"></script>
-	<script type="text/javascript" src="/IMS/resources/js/home2.js"></script>
+	<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 	
 </html>
+

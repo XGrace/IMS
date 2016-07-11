@@ -19,15 +19,12 @@ public class IMSCtrl
 	@RequestMapping(value="/index", method={RequestMethod.GET})
 	public ModelAndView viewHome()
 	{
-		System.out.println("In viewIndex()");
 		return new ModelAndView("index", "user", new User());
 	}
 	
 	@RequestMapping(value="/login", method={RequestMethod.POST})
 	public ModelAndView viewLogin(@ModelAttribute User user)
 	{
-		System.out.println("In viewLogin()");
-		
 		if (userServiceImpl.authenticateUser(user) != null)
 			return new ModelAndView("home", "user", user);
 		else
@@ -52,10 +49,4 @@ public class IMSCtrl
 		return mv;
 	}
 	
-	@RequestMapping(value="/test", method={RequestMethod.GET})
-	public String viewTest()
-	{
-		System.out.println("In viewTest()");
-		return "test";
-	}
 }
