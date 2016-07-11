@@ -65,20 +65,17 @@ public class ProductCategoriesDAOImpl implements ProductCategoriesDAO
 		return productCategory;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
-	public ProductCategories getProductCategoriesById(Long id)
-	{
-		ProductCategories productCategory = null;
-		
+	public List<ProductCategories> getProductCategoriesById(Long id)
+	{		
 		Session session = sessionFactory.getCurrentSession();
 		
-		Query query = session.createQuery("from ProductCategories where categoryId = :id");
+		Query query = session.createQuery("from ProductCategories pc where pc.productCategory.categoryId = :id");
 		
 		query.setLong("id", id);
 		
-		productCategory = (ProductCategories) query.uniqueResult();
-		
-		return productCategory;	
+		return (List<ProductCategories>) query.list();	
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -89,7 +86,7 @@ public class ProductCategoriesDAOImpl implements ProductCategoriesDAO
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Product> getProductsByCategory(Long categoryId)
+	public List<Product> getProductsByCategoryId(Long categoryId)
 	{
 		return (List<Product>) sessionFactory.getCurrentSession().createQuery("select pc.product from ProductCategories pc where pc.productCategory.categoryId = :id").setLong("id", 1).list();
 	}

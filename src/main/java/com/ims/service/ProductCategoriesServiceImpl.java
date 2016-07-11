@@ -40,7 +40,7 @@ public class ProductCategoriesServiceImpl implements ProductCategoriesService
 	}
 	
 	@Override
-	public ProductCategories getProductCategoriesById(Long id)
+	public List<ProductCategories> getProductCategoriesById(Long id)
 	{
 		return productCategoriesDAOImpl.getProductCategoriesById(id);
 	}
@@ -52,8 +52,8 @@ public class ProductCategoriesServiceImpl implements ProductCategoriesService
 	}
 	
 	@Override
-	public List<Product> getProductsByCategory(Long categoryId)
+	public List<Product> getProductsByCategoryId(Long categoryId)
 	{
-		return productCategoriesDAOImpl.getProductsByCategory(categoryId);
+		return productCategoriesDAOImpl.getProductsByCategoryId(categoryId);
 	}
 }

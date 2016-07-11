@@ -13,8 +13,9 @@ public interface ProductCategoriesService
 	public void removeProductCategoriesById(Long id);
 	
 	public ProductCategories getProductCategoriesByUpc(Long upc);
-	public ProductCategories getProductCategoriesById(Long id);
 	
+	public List<ProductCategories> getProductCategoriesById(Long id);
 	public List<ProductCategories> getAllProductCategories();
-	public List<Product> getProductsByCategory(Long categoryId);
+	
+	public List<Product> getProductsByCategoryId(Long categoryId);
 }

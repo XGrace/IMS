@@ -72,7 +72,7 @@ public class IMSCtrl
 	{
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("test");
-		mv.addObject("productList", productCategoriesServiceImpl.getProductsByCategory(1L));
+		mv.addObject("productList", productCategoriesServiceImpl.getProductCategoriesById(1L));
 		
 		return mv;
 	}

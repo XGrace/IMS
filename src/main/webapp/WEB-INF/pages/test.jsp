@@ -10,7 +10,7 @@
 </head>
 <body>
 <c:forEach var="product" items="${productList}">
-	<c:out value="${product}">
+	<c:out value="${product.product}">
 	</c:out>
 	<br>
 </c:forEach>
