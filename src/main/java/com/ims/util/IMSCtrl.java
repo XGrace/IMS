@@ -1,5 +1,7 @@
 package com.ims.util;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ims.domain.ProductCategories;
 import com.ims.domain.User;
 import com.ims.service.ClientService;
 import com.ims.service.ProductCategoriesService;
@@ -34,7 +37,12 @@ public class IMSCtrl
 	public ModelAndView viewLogin(@ModelAttribute User user)
 	{
 		if (userServiceImpl.authenticateUser(user) != null)
-			return new ModelAndView("home", "user", user);
+		{
+			ModelAndView home = new ModelAndView("home");
+			List<ProductCategories> prodCatList = productCategoriesServiceImpl.getAllProductCategories();
+			home.addObject("prodCatList", prodCatList);
+			return home;
+		}
 		else
 		{
 			ModelAndView mv = new ModelAndView("index");
