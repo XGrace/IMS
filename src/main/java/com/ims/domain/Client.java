@@ -42,14 +42,14 @@ public class Client
 	
 	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="CLIENT_TYPE_ID", referencedColumnName="CLIENT_TYPE_ID")
-	private ClientType client;
+	private ClientType clientType;
 
 	@Override
 	public String toString()
 	{
 		return "Client [clientId=" + clientId + ", clientName=" + clientName + ", clientEmail=" + clientEmail
 				+ ", pointOfContactName=" + pointOfContactName + ", clientPhone=" + clientPhone + ", clientFax="
-				+ clientFax + ", address=" + address + ", client=" + client + "]";
+				+ clientFax + ", address=" + address + ", client=" + clientType + "]";
 	}
 
 	public Client()
@@ -66,7 +66,7 @@ public class Client
 		this.clientPhone = clientPhone;
 		this.clientFax = clientFax;
 		this.address = address;
-		this.client = client;
+		this.clientType= client;
 	}
 
 	public Long getClientId()
@@ -141,11 +141,11 @@ public class Client
 
 	public ClientType getClient()
 	{
-		return client;
+		return clientType;
 	}
 
 	public void setClient(ClientType client)
 	{
-		this.client = client;
+		this.clientType = client;
 	}
 }

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.ims.domain.Product;
 import com.ims.domain.ProductCategories;
 
 @Repository
@@ -85,5 +86,11 @@ public class ProductCategoriesDAOImpl implements ProductCategoriesDAO
 	public List<ProductCategories> getAllProductCategories()
 	{
 		return sessionFactory.getCurrentSession().createQuery("from ProductCategories").list();	
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Product> getProductsByCategory(Long categoryId)
+	{
+		return (List<Product>) sessionFactory.getCurrentSession().createQuery("select pc.product from ProductCategories pc where pc.productCategory.categoryId = :id").setLong("id", 1).list();
 	}
 }

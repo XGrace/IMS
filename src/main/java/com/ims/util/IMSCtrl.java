@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ims.domain.User;
+import com.ims.service.ClientService;
+import com.ims.service.ProductCategoriesService;
 import com.ims.service.UserService;
 
 @Controller
@@ -15,6 +17,12 @@ public class IMSCtrl
 {
 	@Autowired
 	private UserService userServiceImpl;
+	
+	@Autowired
+	private ClientService clientServiceImpl;
+	
+	@Autowired
+	private ProductCategoriesService productCategoriesServiceImpl;
 	
 	@RequestMapping(value="/index", method={RequestMethod.GET})
 	public ModelAndView viewHome()
@@ -49,4 +57,23 @@ public class IMSCtrl
 		return mv;
 	}
 	
+	@RequestMapping(value="/clients", method={RequestMethod.GET})
+	public ModelAndView viewClients()
+	{
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("client");
+		mv.addObject("clientList", clientServiceImpl.getAllClients());
+		
+		return mv;
+	}
+	
+	@RequestMapping(value="/test", method={RequestMethod.GET})
+	public ModelAndView viewProductsByCategory()
+	{
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("test");
+		mv.addObject("productList", productCategoriesServiceImpl.getProductsByCategory(1L));
+		
+		return mv;
+	}
 }

@@ -2,6 +2,7 @@ package com.ims.dao;
 
 import java.util.List;
 
+import com.ims.domain.Product;
 import com.ims.domain.ProductCategories;
 
 public interface ProductCategoriesDAO 
@@ -15,4 +16,5 @@ public interface ProductCategoriesDAO
 	public ProductCategories getProductCategoriesById(Long id);
 	
 	public List<ProductCategories> getAllProductCategories();
+	public List<Product> getProductsByCategory(Long categoryId);
 }

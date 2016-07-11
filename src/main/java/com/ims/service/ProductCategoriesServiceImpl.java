@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ims.dao.ProductCategoriesDAO;
+import com.ims.domain.Product;
 import com.ims.domain.ProductCategories;
 
 @Service
@@ -48,5 +49,11 @@ public class ProductCategoriesServiceImpl implements ProductCategoriesService
 	public List<ProductCategories> getAllProductCategories()
 	{
 		return productCategoriesDAOImpl.getAllProductCategories();
+	}
+	
+	@Override
+	public List<Product> getProductsByCategory(Long categoryId)
+	{
+		return productCategoriesDAOImpl.getProductsByCategory(categoryId);
 	}
 }

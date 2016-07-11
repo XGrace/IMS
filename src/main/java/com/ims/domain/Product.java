@@ -1,7 +1,5 @@
 package com.ims.domain;
 
-import java.sql.Blob;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -42,7 +40,7 @@ public class Product
 	private Double productWeight;
 	
 	@Column(name="PRODUCT_IMAGE")
-	private Blob productImage;
+	private String productImage;
 	
 	@Override
 	public String toString()
@@ -58,7 +56,7 @@ public class Product
 	}
 
 	public Product(Long productUpc, String productName, String productDescription, String shortName, Double unitCost,
-			Long reorderQuantity, Double retailPrice, Double productWeight, Blob productImage)
+			Long reorderQuantity, Double retailPrice, Double productWeight, String productImage)
 	{
 		this.productUpc = productUpc;
 		this.productName = productName;
@@ -151,12 +149,12 @@ public class Product
 		this.productWeight = productWeight;
 	}
 
-	public Blob getProductImage()
+	public String getProductImage()
 	{
 		return productImage;
 	}
 
-	public void setProductImage(Blob productImage)
+	public void setProductImage(String productImage)
 	{
 		this.productImage = productImage;
 	}
