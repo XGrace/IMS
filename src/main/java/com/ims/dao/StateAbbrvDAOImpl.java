@@ -52,6 +52,22 @@ public class StateAbbrvDAOImpl implements StateAbbrvDAO
 		return stateAbbrv;			
 	}
 	
+	@Override
+	public StateAbbrv getStateAbbrvByStateName(String stateName)
+	{
+		StateAbbrv stateAbbrv = null;
+		
+		Session session = sessionFactory.getCurrentSession();
+		
+		Query query = session.createQuery("from StateAbbrv where stateName = :stateName");
+		
+		query.setString("stateName", stateName);
+		
+		stateAbbrv = (StateAbbrv) query.uniqueResult();
+		
+		return stateAbbrv;					
+	}
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<StateAbbrv> getAllStateAbbrvs()

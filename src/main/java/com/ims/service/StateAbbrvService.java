@@ -11,6 +11,7 @@ public interface StateAbbrvService
 	public void removeStateAbbrvById(Long id);
 	
 	public StateAbbrv getStateAbbrvById(Long id);
+	public StateAbbrv getStateAbbrvByStateName(String stateName);
 	
 	public List<StateAbbrv> getAllStateAbbrvs();
 }

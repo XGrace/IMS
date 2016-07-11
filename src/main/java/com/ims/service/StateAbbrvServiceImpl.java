@@ -31,6 +31,12 @@ public class StateAbbrvServiceImpl implements StateAbbrvService
 	{
 		return stateAbbrvDAOImpl.getStateAbbrvById(id);
 	}
+	
+	@Override
+	public StateAbbrv getStateAbbrvByStateName(String stateName)
+	{
+		return stateAbbrvDAOImpl.getStateAbbrvByStateName(stateName);
+	}
 
 	@Override
 	public List<StateAbbrv> getAllStateAbbrvs()
