@@ -100,4 +100,10 @@ public class ProductDAOImpl implements ProductDAO
 	{
 		return sessionFactory.getCurrentSession().createQuery("from Product").list();
 	}
+
+	@Override
+	public List<Product> getAllProductsByCategory(String category) 
+	{
+		return null;
+	}
 }

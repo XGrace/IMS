@@ -110,7 +110,7 @@ insert into ims_client_type(client_type) values('Retailer');
 
 create table ims_product_category(
   category_id number,
-  category_name varchar2(50) not null,
+  category_description varchar2(50) not null,
   constraint ipc_pk primary key(category_id)
 );
 --
@@ -127,16 +127,16 @@ end;
 /
 --
 insert all
-  into ims_product_category(category_name) values('CPU')
-  into ims_product_category(category_name) values('Graphics Card')
-  into ims_product_category(category_name) values('Motherboard')
-  into ims_product_category(category_name) values('Hard Drive')
-  into ims_product_category(category_name) values('SSD')
-  into ims_product_category(category_name) values('RAM')
-  into ims_product_category(category_name) values('Power Supply')
-  into ims_product_category(category_name) values('Mouse')
-  into ims_product_category(category_name) values('Keyboard')
-  into ims_product_category(category_name) values('Monitor')
+  into ims_product_category(category_description) values('CPU')
+  into ims_product_category(category_description) values('Graphics Card')
+  into ims_product_category(category_description) values('Motherboard')
+  into ims_product_category(category_description) values('Hard Drive')
+  into ims_product_category(category_description) values('SSD')
+  into ims_product_category(category_description) values('RAM')
+  into ims_product_category(category_description) values('Power Supply')
+  into ims_product_category(category_description) values('Mouse')
+  into ims_product_category(category_description) values('Keyboard')
+  into ims_product_category(category_description) values('Monitor')
 select * from dual;
 --
 

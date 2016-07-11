@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,85 +39,26 @@
       <div role="tabpanel" class="tab-pane active" id="panel-1">
         <div class="row masonry-container">
 
+		<c:forEach items="${ prodCatList }" var="prodCat">
           <div class="col-md-4 col-sm-6 item">
             <div class="thumbnail">
-              <img src="/IMS/resources/images/i74790k.jpg" alt="">
+              <img src="/IMS/resources/images/${ prodCat.product.productImage }" alt="">
               <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a>
+                <h3>${ prodCat.product.productName }</h3>
+                <p>${ prodCat.product.productDescription }</p>
+                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">
+                <fmt:setLocale value="en_US"/><fmt:formatNumber value="${ prodCat.product.unitCost }" type="currency"/></a>
                 Quanity<select>
-				  <option value="pack1">5</option>
-				  <option value="pack2">10</option>
-				  <option value="pack3">15</option>
-				  <option value="pack4">20</option>
+				  <option value="pack1">${ prodCat.product.reorderQuantity * 1}</option>
+				  <option value="pack2">${ prodCat.product.reorderQuantity * 2}</option>
+				  <option value="pack3">${ prodCat.product.reorderQuantity * 3}</option>
+				  <option value="pack4">${ prodCat.product.reorderQuantity * 4}</option>
 				</select></p>
               </div>
             </div>
-          </div><!--/.item  -->
-
-
-          <div class="col-md-4 col-sm-6 item">
-            <div class="thumbnail">
-              <img src="/IMS/resources/images/8350black.jpg" alt="">
-              <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
-              </div>
-            </div>
-          </div><!--/.item  -->
-          
-		  <div class="col-md-4 col-sm-6 item">
-            <div class="thumbnail">
-              <img src="/IMS/resources/images/g3258.jpg" alt="">
-              <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
-              </div>
-            </div>
-          </div><!--/.item  -->
-          
-          
-          <div class="col-md-4 col-sm-6 item">
-            <div class="thumbnail">
-              <img src="/IMS/resources/images/i74790k.jpg" alt="">
-              <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
-              </div>
-            </div>
-          </div><!--/.item  -->
-
-
-          <div class="col-md-4 col-sm-6 item">
-            <div class="thumbnail">
-              <img src="/IMS/resources/images/8350black.jpg" alt="">
-              <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
-              </div>
-            </div>
-          </div><!--/.item  -->
-          
-		  <div class="col-md-4 col-sm-6 item">
-            <div class="thumbnail">
-              <img src="/IMS/resources/images/g3258.jpg" alt="">
-              <div class="caption">
-                <h3>Thumbnail label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <p><a href="#" class="btn btn-primary" role="button">Order</a> <a href="#" class="btn btn-default" role="button">Price</a></p>
-              </div>
-            </div>
-          </div><!--/.item  -->
-          
-          
-          
-          
-          
+          </div><!--/.item  --> 
+        </c:forEach> 
+         
         </div> <!--/.masonry-container  -->
       </div><!--/.tab-panel -->
 

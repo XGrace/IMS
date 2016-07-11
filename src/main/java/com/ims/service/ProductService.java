@@ -10,4 +10,5 @@ public interface ProductService
 	public void removeProductByName(String name);
 	public Product getProductByName(String name);
 	public List<Product> getAllProducts();
+	public List<Product> getAllProductsByCategory(String category);
 }

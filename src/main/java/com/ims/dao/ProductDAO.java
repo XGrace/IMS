@@ -16,4 +16,5 @@ public interface ProductDAO
 	public Product getProductByShortName(String shortName);
 	
 	public List<Product> getAllProducts();
+	public List<Product> getAllProductsByCategory(String category);
 }
